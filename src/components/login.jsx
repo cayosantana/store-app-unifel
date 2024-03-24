@@ -16,7 +16,6 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Implementar a lógica de login aqui
   }
 
   return (
