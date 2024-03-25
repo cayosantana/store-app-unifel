@@ -1,5 +1,6 @@
 .container-login {
     display: flex;
+    flex-direction: column;
     width: 500px;
     background-color: white;
     border-radius: 10px;
@@ -8,11 +9,28 @@
     -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.container-login img {
+    width: 200px;
+    margin: 0px auto;
+    margin-top: 50px;
+    
+}
+
 .container-login form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 40px auto;
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
+
+
+
+.container-login h4 {
+    margin: 0px auto;
+    padding: 20px 0 15px 0;
+    color: #965602;
+
 }
 
 .login-email, .login-senha {
@@ -24,14 +42,24 @@
 .login-email input, .login-senha input {
     width: 300px;
     height: 30px;
+    border: 1px solid #B2C876;
+    border-radius: 5px;
 }
 
 .botao {
     width: 300px;
     height: 30px;
+    border: none;
+    background-color: #B2C876;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+
 }
 
 .login-email p, .login-senha p {
     font-size: 15px;
+    font-weight: 700;
+    color: #B2C876
 }
 

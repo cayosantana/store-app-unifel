@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './login.css'
+import logoEco from './image/logo-eco.png'
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -20,6 +21,8 @@ function Login() {
 
   return (
     <div className='container-login'>
+      <img src={ logoEco } alt="" />
+      <h4>Efetue o login e <span>Boas Compras!</span></h4>
         <form onSubmit={handleSubmit}>
           <label className='login-email'>
             <p>Email:</p>
