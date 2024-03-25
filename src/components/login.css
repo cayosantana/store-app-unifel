@@ -13,8 +13,7 @@
 .container-login img {
     width: 200px;
     margin: 0px auto;
-    margin-top: 50px;
-    
+    margin-top: 50px;    
 }
 
 .container-login form {
@@ -24,8 +23,6 @@
     margin: 0px auto;
     margin-bottom: 50px;
 }
-
-
 
 .container-login h4 {
     margin: 0px auto;
@@ -63,8 +60,6 @@
 .botao:enabled {
     background-color: #965602;
 }
-
-
 
 .login-email p, .login-senha p {
     font-size: 15px;
