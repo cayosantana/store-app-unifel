@@ -1,5 +1,7 @@
 import React from 'react';
 import Login from '../components/login';
+import imageHome from './image/tela-home-eco.png'
+import './home.css'
 
 
 function Home() {
@@ -7,8 +9,14 @@ function Home() {
 
   return (
     <>
-      <h1>Teste loja</h1>
-      <Login />
+      <div className='container-home'>
+        <div className='container-home-img'>
+          <img src={imageHome} alt="" />
+        </div>
+        <div className='container-home-login'>
+          <Login />
+        </div>
+      </div>
     </>
   )
 }

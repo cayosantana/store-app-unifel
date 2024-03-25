@@ -1,0 +1,27 @@
+.container-home {
+    width: 100%;
+    display: flex;
+    
+
+}
+
+.container-home-img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2eb79ba;
+}
+
+.container-home-img img {
+    width: 700px;
+}
+
+.container-home-login {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
