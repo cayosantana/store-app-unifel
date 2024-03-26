@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './login.css'
 import logoEco from './image/logo-eco.png'
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -32,7 +33,7 @@ function Login() {
             <p>Senha:</p>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </label>
-          <input className='botao' type="submit" value="Login" disabled={!isValid()} />
+          <Link to='/products'><input className='botao' type="submit" value="Login" disabled={!isValid()} /></Link>
         </form>
     </div>
   );
