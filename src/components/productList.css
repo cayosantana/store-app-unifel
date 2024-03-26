@@ -1,0 +1,56 @@
+.container-product {
+    background-color: #F5F5F5;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 40px;
+    margin-top: 10px;
+
+}
+
+.container-item {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.container-item .container-item-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    height: 420px;
+
+    
+}
+
+.container-item .container-item-img img {
+    width: 300px;
+    padding:  20px 40px;
+    border-radius: 15px;
+}
+
+.container-item .container-item-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    max-height: 400px;
+
+}
+
+.container-item .container-item-txt h4 {
+
+}

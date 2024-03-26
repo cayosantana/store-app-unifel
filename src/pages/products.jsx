@@ -1,5 +1,6 @@
 import './products.css'
 import logoImageProd from './image/logo-eco.png'
+import ProductList from '../components/productList';
 
 const Products = () => {
     return ( 
@@ -9,6 +10,7 @@ const Products = () => {
                     <img src={logoImageProd} alt="" />
                     
                 </div>
+                <ProductList />
             </div>
         </>
     );
