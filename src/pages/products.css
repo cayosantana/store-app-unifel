@@ -1,0 +1,17 @@
+.page-products {
+    width: 100vw;
+}
+
+.image-logo-products {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 5px 8px -4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 5px 8px -4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 5px 8px -4px rgba(0, 0, 0, 0.1);
+}
+
+.image-logo-products img {
+    width: 200px;
+    margin: 20px 0px;
+}
