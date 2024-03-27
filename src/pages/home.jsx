@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../components/login';
-import imageHome from './image/tela-home-eco.png'
+import imageHome from './image/tela-flashstore.png'
 import './home.css'
 
 

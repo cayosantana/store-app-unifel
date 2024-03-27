@@ -1,3 +1,30 @@
+.container-product-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 05px;
+    background-color: #2C292C;
+    padding: 10px 0px;
+    color: #FED353;
+    
+}
+
+.container-product-filter input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+}
+
+.container-product-filter input::placeholder {
+    padding-left: 10px;
+}
+
+.container-product-filter .icon-search {
+    font-size: 25px;
+}
+
 .container-product {
     background-color: #F5F5F5;
     width: 100vw;

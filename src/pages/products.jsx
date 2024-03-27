@@ -1,5 +1,5 @@
 import './products.css'
-import logoImageProd from './image/logo-eco.png'
+import logoImageProd from './image/logo-flashstore.png'
 import ProductList from '../components/productList';
 
 const Products = () => {

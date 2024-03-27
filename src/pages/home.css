@@ -10,11 +10,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b2eb79ba;
+    background-color: #ffffff;
 }
 
 .container-home-img img {
-    width: 700px;
+    width: 800px;
 }
 
 .container-home-login {
@@ -23,5 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #b3b3b3;
 
 }
