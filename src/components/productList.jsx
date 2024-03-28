@@ -26,6 +26,11 @@ const ProductList = () => {
     setTotal(total - product.price);
   };
 
+  const formatPrice = (price) => {
+    return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 });
+  };
+
+
   return (
     <div>
       <div className='container-product-filter'>
@@ -43,13 +48,13 @@ const ProductList = () => {
             <div className='container-item-img'><img src={product.image} alt={product.title} /></div>
             <div className='container-item-txt'>
                 <h4>{product.title}</h4>
-                <p>{product.price}</p>
+                <p>{formatPrice(product.price)}</p>
                 <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
                 <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
             </div>
           </div>
         ))}
-        <h2>Total: {total}</h2>
+        <h2>Total: {formatPrice(total)}</h2>
         <button onClick={() => alert('Finalizar compra')}>Checkout</button>
       </div>
     </div>
