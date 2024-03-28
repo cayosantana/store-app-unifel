@@ -24,6 +24,14 @@ const ProductList = () => {
     const newCart = cart.filter(item => item.id !== product.id);
     setCart(newCart);
     setTotal(total - product.price);
+
+      // Verifique se o preço do produto é menor ou igual ao total antes de subtrair
+    if (product.price <= total) {
+      setTotal(total - product.price);
+    } else {
+      // Se o preço do produto for maior que o total, mantenha o total como zero
+      setTotal(0);
+    }
   };
 
   const formatPrice = (price) => {
@@ -47,10 +55,14 @@ const ProductList = () => {
           <div key={product.id} className='container-item'>
             <div className='container-item-img'><img src={product.image} alt={product.title} /></div>
             <div className='container-item-txt'>
-                <h4>{product.title}</h4>
-                <p>{formatPrice(product.price)}</p>
-                <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
-                <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
+                <div className='item-txt-name'>
+                  <h4>{product.title}</h4>
+                  <p>{formatPrice(product.price)}</p>
+                </div>
+                <div className='item-btn'>
+                  <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
+                  <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
+                </div>
             </div>
           </div>
         ))}

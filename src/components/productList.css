@@ -72,12 +72,25 @@
 .container-item .container-item-txt {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
     max-width: 300px;
     max-height: 400px;
 
 }
 
-.container-item .container-item-txt h4 {
+.container-item .container-item-txt .item-txt-name, .container-item .container-item-txt .item-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
+.container-item .container-item-txt .item-txt-name h4 {
+    color: #505050;
+}
+
+.container-item .container-item-txt .item-txt-name p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff9900;
 }
