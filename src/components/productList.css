@@ -1,15 +1,39 @@
-.container-product-filter {
+.container-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container-product-img {
+    background-color: white;
     display: flex;
     justify-content: center;
+}
+
+.container-product-img img {
+    width: 200px;
+    margin: 10px 0px;
+}
+
+.container-product-filter {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 05px;
     background-color: #2C292C;
-    padding: 10px 0px;
+    padding: 10px 40px;
     color: #FED353;
     
 }
 
-.container-product-filter input {
+.container-product-filter .container-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-product-filter .container-input input {
     width: 300px;
     height: 30px;
     border: none;
@@ -25,6 +49,24 @@
     font-size: 25px;
 }
 
+.container-product-filter .container-shop-car {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.container-product-filter .container-shop-car .container-total {
+    display: flex;
+    align-items: center;
+
+}
+
+.container-product-filter .container-shop-car .container-total .icon-total {
+    margin-right: 10px;
+    font-size: 25px;
+      
+}
+
 .container-product {
     background-color: #F5F5F5;
     width: 100vw;
@@ -34,7 +76,7 @@
     justify-content: space-around;
     gap: 40px;
     padding: 40px;
-    margin-top: 10px;
+    margin-top: 110px;
 
 }
 
@@ -85,12 +127,25 @@
     gap: 5px;
 }
 
-.container-item .container-item-txt .item-txt-name h4 {
+.container-item .container-item-txt .item-txt-name h5 {
     color: #505050;
+    font-size: 15px;
 }
 
 .container-item .container-item-txt .item-txt-name p {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
-    color: #ff9900;
+    color: #2C292C;
+}
+
+.container-item .container-item-txt .item-btn .btn-add {
+    height: 40px;
+    background-color: #fcbd00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-item .container-item-txt .item-btn .btn-add .icon-shop {
+    margin-right: 7px;
 }
