@@ -1,0 +1,7 @@
+.container-details {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+}

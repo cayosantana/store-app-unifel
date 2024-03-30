@@ -27,11 +27,9 @@ const ProductList = () => {
     setCart(newCart);
     setTotal(total - product.price);
 
-      // Verifique se o preço do produto é menor ou igual ao total antes de subtrair
     if (product.price <= total) {
       setTotal(total - product.price);
     } else {
-      // Se o preço do produto for maior que o total, mantenha o total como zero
       setTotal(0);
     }
   };
