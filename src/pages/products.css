@@ -138,6 +138,20 @@
     color: #2C292C;
 }
 
+.container-item .container-item-txt .item-txt-name .container-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-item .container-item-txt .item-txt-name .container-price button {
+    border: none;
+    background-color: #F5F5F5;
+    font-size: 15px;
+    color: #fcbd00;
+    cursor: pointer;
+}
+
 .container-item .container-item-txt .item-btn .btn-add {
     height: 40px;
     background-color: #fcbd00;

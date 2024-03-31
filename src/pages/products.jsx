@@ -5,6 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import logoImageProd from './image/logo-flashstore.png'
 import { Link } from 'react-router-dom';
+import { CgDetailsMore } from "react-icons/cg";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -71,12 +72,14 @@ const Products = () => {
             <div className='container-item-txt'>
                 <div className='item-txt-name'>
                   <h5>{product.title}</h5>
-                  <p>{formatPrice(product.price)}</p>
+                  <div className='container-price'>
+                    <p>{formatPrice(product.price)}</p>
+                    <Link to={`/products/${product.id}`}><button><CgDetailsMore className='.icon-details'/>Detalhes</button></Link>
+                  </div>
                 </div>
                 <div className='item-btn'>
                   <button className='btn-add'onClick={() => addToCart(product)}><FiShoppingCart className='icon-shop'/>Adicionar ao carrinho</button>
                   <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
-                  <Link to={`/products/${product.id}`}><input type="submit" value="Detalhes" /></Link>
                 </div>
             </div>
           </div>

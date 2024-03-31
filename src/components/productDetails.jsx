@@ -3,7 +3,6 @@ import axios from 'axios';
 import './productDetails.css'
 import { IoArrowBack } from "react-icons/io5";
 import { SlStar } from "react-icons/sl";
-import { SlLike } from "react-icons/sl";
 import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
