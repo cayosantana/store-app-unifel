@@ -7,6 +7,7 @@ import logoImageProd from './image/logo-flashstore.png'
 import { Link } from 'react-router-dom';
 import { CgDetailsMore } from "react-icons/cg";
 
+
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -61,6 +62,7 @@ const Products = () => {
               <FiShoppingCart className='icon-total'/>
               <h2>Total: {formatPrice(total)} </h2>
             </div>
+            <Link to='/checkout'><button>Teste</button></Link>
             <button onClick={() => alert('Finalizar compra')}>Checkout</button>
           </div>
         </div>
