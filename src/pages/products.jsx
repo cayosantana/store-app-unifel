@@ -6,6 +6,8 @@ import { FiShoppingCart } from "react-icons/fi";
 import logoImageProd from './image/logo-flashstore.png'
 import { Link } from 'react-router-dom';
 import { CgDetailsMore } from "react-icons/cg";
+import { TbLogout2 } from "react-icons/tb";
+import Cart from '../components/cart';
 
 
 const Products = () => {
@@ -13,6 +15,8 @@ const Products = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [filter, setFilter] = useState('');
+  const [showCart, setShowCart] = useState(false);
+  
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
@@ -58,14 +62,15 @@ const Products = () => {
             />
           </div>
           <div className='container-shop-car'>
-            <div className='container-total'>
+            {/*<div className='container-total'>
               <FiShoppingCart className='icon-total'/>
               <h2>Total: {formatPrice(total)} </h2>
-            </div>
-            <Link to='/checkout'><button>Teste</button></Link>
-            <button onClick={() => alert('Finalizar compra')}>Checkout</button>
+            </div>*/}
+            <button onClick={() => setShowCart(!showCart)} className='carinho'>Carrinho<FiShoppingCart /></button>
+            <Link to='/' className='link'><button className='logout'>Logout <TbLogout2 /> </button></Link>
           </div>
         </div>
+        {showCart && <Cart />}
       </div>
       <div className='container-product'>
         {products.filter(product => product.title.toLowerCase().includes(filter.toLowerCase())).map(product => (
@@ -80,7 +85,7 @@ const Products = () => {
                   </div>
                 </div>
                 <div className='item-btn'>
-                  <button className='btn-add'onClick={() => addToCart(product)}><FiShoppingCart className='icon-shop'/>Adicionar ao carrinho</button>
+                  <button className='btn-add'onClick={() => {addToCart(product);}}><FiShoppingCart className='icon-shop'/>Adicionar ao carrinho</button>
                   <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
                 </div>
             </div>
