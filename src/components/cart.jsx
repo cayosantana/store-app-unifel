@@ -40,16 +40,22 @@ const Cart = ({ cart, setCart }) => {
           <h1>Carrinho</h1>
           <button onClick={() => navigate('/checkout', { state: {cart}})}>Checkout</button>
         </div>
-        <ul>
-          {cart.map(product => (
-            <li key={product.id}>
-              <img width="50px" src={product.image} alt={product.title} />
-              <p>{product.title}</p>
-              <p>Preço: {formatPrice(product.price)}</p>
-              <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
-            </li>
-          ))}
-        </ul>
+        <div className='sombra'>
+          <div className='container-item-cart'>
+            {cart.map(product => (
+              <div key={product.id}>
+                <div className='item-img'>
+                  <img width="50px" src={product.image} alt={product.title} />
+                </div>
+                <div className='item-txt'>
+                  <h5>{product.title}</h5>
+                  <p>{formatPrice(product.price)}</p>
+                  <button onClick={() => removeFromCart(product)}>Remover   do carrinho</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   };
