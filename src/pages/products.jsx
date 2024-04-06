@@ -29,18 +29,7 @@ const Products = () => {
     setTotal(total + product.price);
   };
 
-  const removeFromCart = (product) => {
-    const newCart = cart.filter(item => item.id !== product.id);
-    setCart(newCart);
-    setTotal(total - product.price);
-
-    if (product.price <= total) {
-      setTotal(total - product.price);
-    } else {
-      setTotal(0);
-    }
-  };
-
+  
   const formatPrice = (price) => {
     return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 });
   };
@@ -70,7 +59,7 @@ const Products = () => {
             <Link to='/' className='link'><button className='logout'>Logout <TbLogout2 /> </button></Link>
           </div>
         </div>
-        {showCart && <Cart />}
+        {showCart && <Cart cart={cart} setCart={setCart} />}
       </div>
       <div className='container-product'>
         {products.filter(product => product.title.toLowerCase().includes(filter.toLowerCase())).map(product => (
@@ -85,8 +74,7 @@ const Products = () => {
                   </div>
                 </div>
                 <div className='item-btn'>
-                  <button className='btn-add'onClick={() => {addToCart(product);}}><FiShoppingCart className='icon-shop'/>Adicionar ao carrinho</button>
-                  <button onClick={() => removeFromCart(product)}>Remover do carrinho</button>
+                  <button className='btn-add'onClick={() => addToCart(product)}><FiShoppingCart className='icon-shop'/>Adicionar ao carrinho</button>
                 </div>
             </div>
           </div>
